@@ -117,5 +117,58 @@ public class daily {
 //        System.out.println(String.format("%d + %d = %d", a, b, a+b));
     }
 
+    /**
+     * 입력 : apple pen
+     * 출력 : applepen
+     */
+    public static void step7() {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+        String b = sc.next();
 
+        String c = a + b;
+        System.out.println(c.trim());
+    }
+
+    /**
+     * 입력 : abcde
+     * 출력 :
+     * a
+     * b
+     * c
+     * d
+     * e
+     */
+    public static void step8() {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.next();
+
+//        for (int i = 0; i < a.length(); i++) {
+//            System.out.println(a.charAt(i));
+//        }
+
+        for (char ch : a.toCharArray())
+            System.out.println(ch);
+    }
+
+    /**
+     * 자연수 n이 입력으로 주어졌을 때 만약 n이 짝수이면 "n is even"을, 홀수이면 "n is odd"를 출력하는 코드를 작성해 보세요
+     */
+    public static void step9() {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+
+        System.out.println((a % 2 == 0) ? a + " is even" : a + " is odd");
+    }
+
+    /**
+     * 문자열 my_string, overwrite_string과 정수 s가 주어집니다.
+     * 문자열 my_string의 인덱스 s부터 overwrite_string의 길이만큼을
+     * 문자열 overwrite_string으로 바꾼 문자열을return 하는 solution 함수를 작성해 주세요.
+     */
+    public static String step10(String my_string, String overwrite_string, int s) {
+        String before = my_string.substring(0, s);
+        String after = my_string.substring(s + overwrite_string.length());
+        return before + overwrite_string + after;
+    }
 }

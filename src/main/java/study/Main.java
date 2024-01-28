@@ -4,6 +4,6 @@ import static study.algorithms.daily.daily.*;
 
 public class Main {
     public static void main(String[] args) {
-        step6();
+        //step10();
     }
 }
