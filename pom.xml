@@ -6,7 +6,15 @@
 
     <groupId>study</groupId>
     <artifactId>algorithm</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>algorithm-0.0.1</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
