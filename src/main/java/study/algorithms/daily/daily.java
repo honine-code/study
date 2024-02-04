@@ -171,4 +171,82 @@ public class daily {
         String after = my_string.substring(s + overwrite_string.length());
         return before + overwrite_string + after;
     }
+
+    /** daily 3 */
+
+    /**
+     * 길이가 같은 두 문자열 str1과 str2가 주어집니다.
+     * 두 문자열의 각 문자가 앞에서부터 서로 번갈아가면서 한 번씩 등장하는 문자열을 만들어 return 하는 solution 함수를 완성해 주세요.
+     */
+    public static String step11(String str1, String str2) {
+        String answer = "";
+        for (int i = 0; i < str1.length(); i++) {
+            answer += str1.charAt(i);
+            answer += str2.charAt(i);
+        }
+        return answer;
+    }
+
+    /**
+     * 문자들이 담겨있는 배열 arr가 주어집니다. arr의 원소들을 순서대로 이어 붙인 문자열을 return 하는 solution함수를 작성해 주세요.
+     */
+    public static String step12(String[] arr) {
+        String answer = "";
+        for (String a: arr) {
+            answer += a;
+        }
+        return answer;
+        //return String.join("", arr);
+    }
+
+    /**
+     * 문자열 my_string과 정수 k가 주어질 때, my_string을 k번 반복한 문자열을 return 하는 solution 함수를 작성해 주세요.
+     */
+    public static String step13(String my_string, int k) {
+        String answer = "";
+
+        for (int i = 0; i < k; i++) {
+            answer += my_string;
+        }
+        return answer;
+        //return my_string.repeat(k);
+    }
+
+    /**
+     * 연산 ⊕는 두 정수에 대한 연산으로 두 정수를 붙여서 쓴 값을 반환합니다. 예를 들면 다음과 같습니다.
+     *
+     * 12 ⊕ 3 = 123
+     * 3 ⊕ 12 = 312
+     * 양의 정수 a와 b가 주어졌을 때, a ⊕ b와 b ⊕ a 중 더 큰 값을 return 하는 solution 함수를 완성해 주세요.
+     *
+     * 단, a ⊕ b와 b ⊕ a가 같다면 a ⊕ b를 return 합니다.
+     */
+    public static int step14(int a, int b) {
+        int answer = 0;
+
+        String ab = String.valueOf(a) + String.valueOf(b);
+        String ba = String.valueOf(b) + String.valueOf(a);
+
+        answer = Math.max(Integer.parseInt(ab), Integer.parseInt(ba));
+        return answer;
+    }
+
+    /**
+     * 연산 ⊕는 두 정수에 대한 연산으로 두 정수를 붙여서 쓴 값을 반환합니다. 예를 들면 다음과 같습니다.
+     *
+     * 12 ⊕ 3 = 123
+     * 3 ⊕ 12 = 312
+     * 양의 정수 a와 b가 주어졌을 때, a ⊕ b와 2 * a * b 중 더 큰 값을 return하는 solution 함수를 완성해 주세요.
+     *
+     * 단, a ⊕ b와 2 * a * b가 같으면 a ⊕ b를 return 합니다.
+     */
+    public static int step15(int a, int b) {
+        int answer = 0;
+
+        String ab = String.valueOf(a) + String.valueOf(b);
+        int ba = 2 * a * b;
+
+        answer = Math.max(Integer.parseInt(ab), ba);
+        return answer;
+    }
 }
